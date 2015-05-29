@@ -33,7 +33,8 @@ namespace ETWSamples
                 Name = "Custom",
                 Date = DateTime.Now,
                 Number = 100,
-                Countries = new[] { "USA", "India" }
+                Countries = new[] { "USA", "India" },
+                SSN="99999999"
             });
         }
     }
@@ -44,5 +45,9 @@ namespace ETWSamples
         public int Number { get; set; }
         public DateTime Date { get; set; }
         public IEnumerable<string> Countries { get; set; }
+        [EventIgnore]
+        public string SSN { get; set; }
+
+
     }
 }
