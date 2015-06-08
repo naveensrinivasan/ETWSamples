@@ -1,14 +1,9 @@
 ﻿using Microsoft.Diagnostics.Tracing;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace ETWSamples
 {
-   public sealed class CustomEvent: EventSource
+    public sealed class CustomEvent: EventSource
     {
         public static CustomEvent Instance = new CustomEvent();
         [Event(1, Opcode = EventOpcode.Start)]
