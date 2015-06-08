@@ -14,7 +14,7 @@ namespace ETWSamples
         /// The new event source provides an option to log anonymous method.
         /// </summary>
         static EventSource trace = new EventSource("Dynamic");
-        public static void LogAnonymousObject() {
+        public static void Run() {
             for (int i = 0; i < 10; i++)
             {
                 trace.Write("Test", new { Name = "Dynamic Event",
@@ -47,7 +47,5 @@ namespace ETWSamples
         public IEnumerable<string> Countries { get; set; }
         [EventIgnore]
         public string SSN { get; set; }
-
-
     }
 }
